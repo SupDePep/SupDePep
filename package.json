@@ -1,22 +1,86 @@
 {
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "@babel/core": "^7.22.20",
     "@babel/preset-env": "^7.22.20",
     "@babel/preset-react": "^7.22.15",
-    "babel-loader": "^9.1.3",
-    "css-loader": "^6.8.1",
-    "html-webpack-plugin": "^5.5.3",
+    "@babel/preset-typescript": "^7.22.15",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "@tailwindcss/forms": "^0.5.6",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/date-fns": "^2.6.0",
+    "@types/jest": "^27.5.2",
+    "@types/js-cookie": "^3.0.4",
+    "@types/node": "^16.18.53",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-lazyload": "^3.2.0",
+    "cross-env": "^7.0.3",
+    "date-fns": "^2.30.0",
+    "html-react-parser": "^4.2.2",
+    "js-cookie": "^3.0.5",
+    "ky": "^1.0.1",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.68.0",
-    "sass-loader": "^13.3.2",
-    "style-loader": "^3.3.3",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "react-hook-form": "^7.46.2",
+    "react-lazyload": "^3.2.0",
+    "react-router-dom": "6.0.2",
+    "react-scripts": "5.0.1",
+    "sort-by": "^1.2.0",
+    "styled-components": "^6.0.8",
+    "svg-url-loader": "^8.0.0",
+    "swr": "^2.2.2",
+    "tailwindcss": "^3.3.3",
+    "twin.macro": "^3.4.0",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "watch": "cross-env NODE_ENV=development ./node_modules/.bin/webpack --watch --progress",
+    "serve": "cross-env NODE_ENV=development ./node_modules/.bin/webpack serve",
+    "build": "rm -rf public/assets/bundle* && webpack --mode production"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "ts-loader": "^9.4.4",
-    "typescript": "^5.2.2"
+    "@loadable/webpack-plugin": "^5.15.2",
+    "autoprefixer": "^10.4.16",
+    "brotli-webpack-plugin": "^1.1.0",
+    "compression-webpack-plugin": "^10.0.0",
+    "dotenv-webpack": "^8.0.1",
+    "glob": "^10.3.5",
+    "html-webpack-plugin": "^5.5.3",
+    "imagemin-webp-webpack-plugin": "^3.3.6",
+    "lodash-webpack-plugin": "^0.11.6",
+    "postcss": "^8.4.30",
+    "purgecss-webpack-plugin": "^5.0.0",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack": "^5.88.2",
+    "webpack-bundle-analyzer": "^4.9.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-manifest-plugin": "^5.0.0"
   }
 }
